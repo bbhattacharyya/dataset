@@ -1,0 +1,14 @@
+SENSOR CALIBRATION (synthetic benchmark)
+
+Sensor: Tri-ax MEMS accelerometer
+Sensitivity: 100 mV/g  (i.e., 0.100 V per g)
+Offset (zero-g bias, nominal): 1.650 V  (mid-supply)
+
+Conversion:
+  a_g  = (V - 1.650) / 0.100
+  a_mps2 = a_g * 9.80665
+
+Notes:
+- Polarity follows the sensor printed axes.
+- Bandwidth (analog anti-alias): ~2 kHz (2-pole low-pass)
+- Use timestamps in shake_table_accel.csv to infer the actual sampling rate.
